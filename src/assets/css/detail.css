@@ -1,0 +1,44 @@
+.project-detail {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+}
+
+.project-detail h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #ffd700;
+}
+
+.project-detail img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.project-detail p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #dddddd;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 20px;
+  background-color: #ffd700;
+  color: #1e1e1e;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #e6c200;
+}

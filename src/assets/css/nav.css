@@ -1,0 +1,63 @@
+nav {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 80px; /* tinggi navbar lebih besar */
+  background: rgba(10, 10, 35, 0.5); /* transparan */
+  backdrop-filter: blur(10px); /* efek kaca */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 80px; /* padding kiri-kanan lebih besar, fixed px */
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 183, 255, 0.25); /* glow biru */
+  font-size: 20px; /* font size fixed, lebih besar */
+  border-bottom: 1px solid rgba(0, 212, 255, 0.2);
+  min-width: 1200px; /* minimal lebar navbar agar tidak mengecil */
+}
+
+.navbar-logo {
+  font-size: 27px; /* logo lebih besar */
+  font-weight: bold;
+  color: #38bdf8; /* biru neon */
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6); /* glowing */
+}
+
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* jarak menu lebih lebar */
+}
+
+.navbar-menu li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px; /* font size fixed */
+  transition: all 0.3s ease;
+}
+
+.navbar-menu li a:hover {
+  color: #38bdf8;
+  text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
+}
+
+/* Tombol Download CV */
+.nav-cv a {
+  padding: 14px 32px; /* tombol lebih besar */
+  background: linear-gradient(to right, #3b82f6, #0ea5e9);
+  color: white;
+  border: none;
+  border-radius: 32px;
+  font-weight: 200;
+  font-size: 11px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 12px rgba(56, 189, 248, 0.5);
+}
+
+.nav-cv a:hover {
+  background: linear-gradient(to right, #0ea5e9, #0284c7);
+  box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
+  transform: scale(1.08);
+}
