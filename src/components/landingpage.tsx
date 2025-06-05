@@ -2,7 +2,7 @@ import React from "react";
 import { Typewriter } from "react-simple-typewriter";
 import Zio from "../assets/Media/Zio.jpeg";
 import "../assets/css/landingpage.css";
-import BgImage from "../assets/Media/Zio.jpeg";  // pastikan ada file ini
+// import BgImage from "../assets/Media/Zio.jpeg";  // pastikan ada file ini
 import DecryptedText from './DecryptedText/DecryptedText';
 import GradientText from "./GradientText/GradientText";
 

@@ -1,4 +1,4 @@
-import React from 'react';
+// import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Zio from '../assets/Media/pentest.png';
 import Forensik from '../assets/Media/forensik.png';
