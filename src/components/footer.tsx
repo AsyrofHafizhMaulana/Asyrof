@@ -38,7 +38,7 @@ const socialLinks = [
   },
 ];
 
-const Footer = () => {
+const Footer: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -47,14 +47,14 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-logo">
-          <h2>Asyrof Maulana</h2>
+          <h2>Asyrof Hafizh Maulana</h2>
           <p>Digital Illustrator & Web Developer passionate about creating stunning visuals and robust web solutions.</p>
           <button 
             onClick={scrollToTop}
             className="footer-scroll-btn"
-            aria-label="Scroll to top"
+            aria-label="Kembali ke atas"
           >
-            ↑ Back to Top
+            ↑ Kembali ke Atas
           </button>
         </div>
 
@@ -67,34 +67,21 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="footer-social-newsletter">
-          <div className="footer-social">
-            <h3>Follow Me</h3>
-            <div className="social-links">
-              {socialLinks.map(({ name, href, icon: Icon }) => (
-                <a
-                  key={name}
-                  href={href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={name}
-                  title={name}
-                >
-                  <Icon className="social-icon" />
-                </a>
-              ))}
-            </div>
-          </div>
-          <div className="footer-newsletter">
-            <h3>Newsletter</h3>
-            <div className="newsletter-form">
-              <input
-                type="email"
-                placeholder="Enter your email"
-                aria-label="Email for newsletter"
-              />
-              <button type="button">Subscribe</button>
-            </div>
+        <div className="footer-social">
+          <h3>Ikuti Saya</h3>
+          <div className="social-links">
+            {socialLinks.map(({ name, href, icon: Icon }) => (
+              <a
+                key={name}
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={name}
+                title={name}
+              >
+                <Icon className="social-icon" />
+              </a>
+            ))}
           </div>
         </div>
       </div>

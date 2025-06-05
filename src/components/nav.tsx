@@ -13,7 +13,7 @@ export default function Navbar() {
         <li><a href="#contact">Contact</a></li>
       </ul>
       <div className="nav-cv">
-        <a href="public/asyrof.pdf" download>DOWNLOAD CV</a>
+        <a href="public/AsyrofCV.pdf">LIHAT CV</a>
       </div>
     </nav>
   );

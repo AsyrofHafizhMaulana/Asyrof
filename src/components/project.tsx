@@ -7,6 +7,13 @@ import Wazuh from '../assets/Media/wazuh.png';
 import Crypthography from '../assets/Media/crypthography.png';
 import Urbackup from '../assets/Media/urbackup.png';
 import Cisco from '../assets/Media/cisco.png';
+import Hardening from '../assets/Media/hardening.png';
+import Miradore from '../assets/Media/miradore.png';
+import Kismet from '../assets/Media/kismet.png';
+import Wireshark from '../assets/Media/wireshark.jpg';
+import Certif from '../assets/Media/certif.png';
+import Nessus from '../assets/Media/nessus.png';
+
 
 interface ProjectItem {
   title: string;
@@ -28,7 +35,7 @@ const projects: ProjectItem[] = [
     tools: ['OWASP ZAP', 'Nikto', 'Burp Suite', 'Acunetix', 'wapiti', 'Pentest Tools', 'Hosted Scan'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'https://example.com/penetration-testing-report.pdf',
+    pdfUrl: 'public/Project Akhir Pentest.pdf',
   },
   {
     title: 'Dashboard Monitoring Kolam',
@@ -48,7 +55,7 @@ const projects: ProjectItem[] = [
     tools: ['Autopsy', 'Foremost', 'FTK Imager'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'https://example.com/forensik-report.pdf',
+    pdfUrl: 'public/DIGITAL FORENSIC.pdf',
   },
   {
     title: 'Pemantauan Menggunakan SIEM Wazuh',
@@ -58,7 +65,7 @@ const projects: ProjectItem[] = [
     tools: ['Siem Wazuh'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'https://example.com/wazuh-monitoring.pdf',
+    pdfUrl: 'public/INCIDENT INVESTIGATION MENGGUNAKAN SIEM WAZUH.pdf',
   },
   {
     title: 'Cryptography',
@@ -68,7 +75,7 @@ const projects: ProjectItem[] = [
     tools: ['Thunderbird'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'https://example.com/wazuh-monitoring.pdf',
+    pdfUrl: 'public/CRYPTOGRAPHY.pdf',
   },
   {
     title: 'Backup',
@@ -78,7 +85,7 @@ const projects: ProjectItem[] = [
     tools: ['UrBackup'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'https://example.com/wazuh-monitoring.pdf',
+    pdfUrl: 'public/Backup atau Restore.pdf',
   },
   {
     title: 'KONFIGURASI VLAN & ROUTING INTERVLAN',
@@ -88,17 +95,72 @@ const projects: ProjectItem[] = [
     tools: ['Cisco Packet Tracer'],
     year: '2024',
     role: 'Network Engineering',
-    pdfUrl: 'https://example.com/wazuh-monitoring.pdf',
+    pdfUrl: 'public/NETWORK SEGMENTATION DENGAN VLAN & ROUTING INTERVLAN.pdf',
   },
   {
-    title: 'SIEM Wazuh Monitoring 2',
+    title: 'Hardening WebServer',
     description: 'Project untuk melakukan monitoring menggunakan SIEM Wazuh dan pengecekan kerentanan yang didapat',
-    image: Wazuh,
+    image: Hardening,
     details: 'Monitoring aktivitas dan vulnerability menggunakan Wazuh, termasuk integrasi dengan agent client.',
-    tools: ['Wazuh', 'OpenVAS', 'Kibana'],
+    tools: ['XAMPP'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'https://example.com/wazuh-monitoring.pdf',
+    pdfUrl: 'public/Honeypot dan Honeynet.pdf',
+  },
+
+  {
+    title: 'Mobile Device Management',
+    description: 'Project untuk melakukan monitoring menggunakan SIEM Wazuh dan pengecekan kerentanan yang didapat',
+    image: Miradore,
+    details: 'Monitoring aktivitas dan vulnerability menggunakan Wazuh, termasuk integrasi dengan agent client.',
+    tools: ['Miradore'],
+    year: '2024',
+    role: 'Cybersecurity',
+    pdfUrl: 'public/Mobile Device Management Menggunakan Miradore.pdf',
+  },
+
+  {
+    title: 'Wireless Security',
+    description: 'Project untuk melakukan monitoring menggunakan SIEM Wazuh dan pengecekan kerentanan yang didapat',
+    image: Kismet,
+    details: 'Monitoring aktivitas dan vulnerability menggunakan Wazuh, termasuk integrasi dengan agent client.',
+    tools: ['Kismet'],
+    year: '2024',
+    role: 'Cybersecurity',
+    pdfUrl: 'public/Wireless Security Menggunakan Kismet.pdf',
+  },
+
+  {
+    title: 'Secure & Unsecure Protocol',
+    description: 'Project untuk melakukan monitoring menggunakan SIEM Wazuh dan pengecekan kerentanan yang didapat',
+    image: Wireshark,
+    details: 'Monitoring aktivitas dan vulnerability menggunakan Wazuh, termasuk integrasi dengan agent client.',
+    tools: ['Kismet'],
+    year: '2024',
+    role: 'Cybersecurity',
+    pdfUrl: 'public/SECURE & UNSECURE PROTOCOL.pdf',
+  },
+
+  {
+    title: 'Public Key Infrastructure',
+    description: 'Project untuk melakukan monitoring menggunakan SIEM Wazuh dan pengecekan kerentanan yang didapat',
+    image: Certif,
+    details: 'Monitoring aktivitas dan vulnerability menggunakan Wazuh, termasuk integrasi dengan agent client.',
+    tools: ['Kismet'],
+    year: '2024',
+    role: 'Cybersecurity',
+    pdfUrl: 'public/Public Key Infrastructure.pdf',
+  },
+
+  {
+    title: 'Organization Security ',
+    description: 'Project untuk melakukan monitoring menggunakan SIEM Wazuh dan pengecekan kerentanan yang didapat',
+    image: Nessus,
+    details: 'Monitoring aktivitas dan vulnerability menggunakan Wazuh, termasuk integrasi dengan agent client.',
+    tools: ['Kismet'],
+    year: '2024',
+    role: 'Cybersecurity',
+    pdfUrl: 'public/Organization Security Menggunakan Nessus.pdf',
   },
 ];
 

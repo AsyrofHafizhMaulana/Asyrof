@@ -1,13 +1,15 @@
 .experience-certificates {
   text-align: center;
-  padding: 4rem 2rem;
-  min-height: 100vh;
+  padding: 8rem 2rem 4rem; /* Increased top padding for navbar */
+  min-height: calc(100vh - 80px); /* Account for navbar height */
   display: flex;
   flex-direction: column;
   justify-content: center;
   font-family: 'Poppins', sans-serif;
   position: relative;
   overflow: hidden;
+  scroll-margin-top: 80px; /* Offset for smooth scrolling with fixed navbar */
+  background: linear-gradient(135deg, #0f0f11 0%, #1e052d 100%); /* Consistent with projects section */
 }
 
 .experience-certificates h2 {
@@ -43,7 +45,6 @@
   margin: 0 auto;
 }
 
-/* kotak sertifikatnya */
 .certificate-card {
   position: relative;
   width: 100%;
@@ -60,7 +61,6 @@
 .certificate-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3), 0 0 35px rgba(59, 130, 246, 0.6), 0 0 45px rgba(168, 85, 247, 0.5);
-  border: 2px solid transparent;
   background: linear-gradient(45deg, #2486ac, #b03dd3);
 }
 
@@ -106,7 +106,7 @@
   display: block;
   margin-bottom: 0.75rem;
   font-size: 1.3rem;
-  background:#ffffff;
+  background: #ffffff;
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -117,13 +117,12 @@
   font-size: 1.1rem;
 }
 
-/* Modal Styles */
 .certificate-modal {
   position: fixed;
   inset: 0;
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(8px);
-  z-index: 100;
+  z-index: 1000; /* Increased z-index to ensure modal is above other content */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -133,7 +132,6 @@
 .modal-content {
   position: relative;
   background: linear-gradient(135deg, rgba(30, 30, 46, 0.9), rgba(31, 41, 55, 0.9));
-  backdrop-filter: blur(10px);
   border: 2px solid transparent;
   border-radius: 20px;
   max-width: 600px;
@@ -173,24 +171,12 @@
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 0 10px rgba(168, 85, 247, 0.4);
-  z-index: 101;
 }
 
 .modal-close:hover {
   transform: scale(1.1);
   box-shadow: 0 0 15px rgba(168, 85, 247, 0.6);
   background: linear-gradient(90deg, #60a5fa, #c084fc);
-}
-
-.modal-image-link {
-  display: block;
-  cursor: pointer;
-  transition: transform 0.3s ease, opacity 0.3s ease;
-}
-
-.modal-image-link:hover {
-  opacity: 0.9;
-  transform: scale(1.02);
 }
 
 .modal-image {
@@ -205,7 +191,7 @@
   transition: transform 0.3s ease;
 }
 
-.modal-image-link:hover .modal-image {
+.modal-image:hover {
   transform: scale(1.05);
 }
 
@@ -229,7 +215,9 @@
 /* Responsive */
 @media (max-width: 768px) {
   .experience-certificates {
-    padding: 3rem 1.5rem;
+    padding: 6rem 1.5rem 3rem; /* Adjusted for navbar */
+    min-height: calc(100vh - 60px);
+    scroll-margin-top: 60px;
   }
 
   .experience-certificates h2 {
@@ -259,6 +247,10 @@
 }
 
 @media (max-width: 480px) {
+  .experience-certificates {
+    padding: 5rem 1rem 2rem;
+  }
+
   .experience-certificates h2 {
     font-size: 2.2rem;
   }
