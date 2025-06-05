@@ -28,29 +28,29 @@ const Contact: React.FC = () => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+  // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  //   e.preventDefault();
+  //   setIsSubmitting(true);
 
-    emailjs
-      .send(
-        "service_g6d65uq", // Ganti dengan Service ID dari EmailJS, contoh: service_abc123
-        "template_bsgq0b8", // Ganti dengan Template ID dari EmailJS, contoh: template_xyz789
-        formData,
-        "OFzoaASapupOV7DvS" // Ganti dengan Public Key dari EmailJS, contoh: user_123456789
-      )
-      .then(() => {
-        setSubmitMessage("Pesan berhasil dikirim! Aku akan balas secepatnya.");
-        setFormData({ name: "", email: "", message: "" });
-      })
-      .catch((error) => {
-        console.error("EmailJS error:", error);
-        setSubmitMessage("Gagal mengirim pesan. Coba lagi nanti.");
-      })
-      .finally(() => {
-        setIsSubmitting(false);
-      });
-  };
+  //   emailjs
+  //     .send(
+  //       "service_g6d65uq", // Ganti dengan Service ID dari EmailJS, contoh: service_abc123
+  //       "template_bsgq0b8", // Ganti dengan Template ID dari EmailJS, contoh: template_xyz789
+  //       formData,
+  //       "OFzoaASapupOV7DvS" // Ganti dengan Public Key dari EmailJS, contoh: user_123456789
+  //     )
+  //     .then(() => {
+  //       setSubmitMessage("Pesan berhasil dikirim! Aku akan balas secepatnya.");
+  //       setFormData({ name: "", email: "", message: "" });
+  //     })
+  //     .catch((error) => {
+  //       console.error("EmailJS error:", error);
+  //       setSubmitMessage("Gagal mengirim pesan. Coba lagi nanti.");
+  //     })
+  //     .finally(() => {
+  //       setIsSubmitting(false);
+  //     });
+  // };
 
   return (
     <section id="contact" className="contact-section">
@@ -96,7 +96,7 @@ const Contact: React.FC = () => {
           </a>
         </div>
 
-        <form className="contact-form" onSubmit={handleSubmit}>
+        {/* <form className="contact-form" onSubmit={handleSubmit}>
           <h3 className="form-title">Kirim Pesan</h3>
           <div className="form-group">
             <label htmlFor="name">Nama</label>
@@ -137,7 +137,7 @@ const Contact: React.FC = () => {
             {isSubmitting ? "Mengirim..." : "Kirim"}
           </button>
           {submitMessage && <p className="submit-message">{submitMessage}</p>}
-        </form>
+        </form> */}
       </div>
     </section>
   );

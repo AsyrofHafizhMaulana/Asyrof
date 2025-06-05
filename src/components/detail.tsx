@@ -1,4 +1,3 @@
-// import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import Zio from '../assets/Media/pentest.png';
 import Forensik from '../assets/Media/forensik.png';
@@ -43,8 +42,6 @@ const ProjectDetail = () => {
       <h2>{project.title}</h2>
       <img src={project.image} alt={project.title} style={{ maxWidth: '400px' }} />
       <p>{project.description}</p>
-
-      {/* Back button ditempatkan DI DALAM komponen */}
       <Link to="/" className="back-button">← Back to Projects</Link>
     </div>
   );
