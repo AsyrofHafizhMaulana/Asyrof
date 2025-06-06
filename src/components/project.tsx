@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import '../assets/css/project.css';
 import Zio from '../assets/Media/pentest.png';
 import Forensik from '../assets/Media/forensik.png';

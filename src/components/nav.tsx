@@ -1,4 +1,3 @@
-import React from "react";
 import "../assets/css/nav.css";
 
 export default function Navbar() {
