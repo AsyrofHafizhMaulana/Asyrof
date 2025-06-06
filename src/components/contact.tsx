@@ -1,8 +1,13 @@
-import React, { useState, useEffect, type FormEvent } from "react";
+import { useState, useEffect } from "react";
 import { FiMail } from "react-icons/fi";
 import { FaTiktok, FaWhatsapp, FaInstagram } from "react-icons/fa";
 import emailjs from "@emailjs/browser";
 import "../assets/css/contact.css";
+
+// Konstanta untuk kredensial EmailJS (sebaiknya gunakan variabel lingkungan di proyek nyata)
+const EMAILJS_PUBLIC_KEY = "OFzoaASapupOV7DvS"; // Ganti dengan Public Key Anda
+const EMAILJS_SERVICE_ID = "service_g6d65uq"; // Ganti dengan Service ID Anda
+const EMAILJS_TEMPLATE_ID = "template_bsgq0b8"; // Ganti dengan Template ID Anda
 
 interface FormData {
   name: string;
@@ -19,38 +24,43 @@ const Contact: React.FC = () => {
   const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const [submitMessage, setSubmitMessage] = useState<string>("");
 
-  // Inisialisasi EmailJS dengan Public Key
+  // Inisialisasi EmailJS
   useEffect(() => {
-    emailjs.init("OFzoaASapupOV7DvS"); // Ganti dengan Public Key dari EmailJS, contoh: user_123456789
+    emailjs.init(EMAILJS_PUBLIC_KEY);
   }, []);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  // Menangani perubahan input
+  const handleChange = (
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-  //   e.preventDefault();
-  //   setIsSubmitting(true);
+  // Menangani pengiriman formulir
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    if (!formData.name || !formData.email || !formData.message) {
+      setSubmitMessage("Harap isi semua kolom!");
+      return;
+    }
 
-  //   emailjs
-  //     .send(
-  //       "service_g6d65uq", // Ganti dengan Service ID dari EmailJS, contoh: service_abc123
-  //       "template_bsgq0b8", // Ganti dengan Template ID dari EmailJS, contoh: template_xyz789
-  //       formData,
-  //       "OFzoaASapupOV7DvS" // Ganti dengan Public Key dari EmailJS, contoh: user_123456789
-  //     )
-  //     .then(() => {
-  //       setSubmitMessage("Pesan berhasil dikirim! Aku akan balas secepatnya.");
-  //       setFormData({ name: "", email: "", message: "" });
-  //     })
-  //     .catch((error) => {
-  //       console.error("EmailJS error:", error);
-  //       setSubmitMessage("Gagal mengirim pesan. Coba lagi nanti.");
-  //     })
-  //     .finally(() => {
-  //       setIsSubmitting(false);
-  //     });
-  // };
+    setIsSubmitting(true);
+    try {
+      await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+     name: formData.name,
+     email: formData.email,
+     message: formData.message,
+});
+      setSubmitMessage("Pesan berhasil dikirim! Aku akan balas secepatnya.");
+      setFormData({ name: "", email: "", message: "" });
+      setTimeout(() => setSubmitMessage(""), 5000); // Hapus pesan setelah 5 detik
+    } catch (error) {
+      console.error("EmailJS error:", error);
+      setSubmitMessage("Gagal mengirim pesan. Coba lagi nanti.");
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
 
   return (
     <section id="contact" className="contact-section">
@@ -64,6 +74,7 @@ const Contact: React.FC = () => {
             className="contact-button tiktok"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="TikTok @vectrofff_"
           >
             <FaTiktok className="contact-icon" />
             <span>@vectrofff_</span>
@@ -73,6 +84,7 @@ const Contact: React.FC = () => {
             className="contact-button whatsapp"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="WhatsApp +62 815-2855-8775"
           >
             <FaWhatsapp className="contact-icon" />
             <span>+62 815-2855-8775</span>
@@ -82,6 +94,7 @@ const Contact: React.FC = () => {
             className="contact-button instagram"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Instagram @vectrofff_"
           >
             <FaInstagram className="contact-icon" />
             <span>@vectrofff_</span>
@@ -89,14 +102,14 @@ const Contact: React.FC = () => {
           <a
             href="mailto:pengenjadikamenrider@gmail.com"
             className="contact-button email"
-            aria-label="Send Email"
+            aria-label="Email pengenjadikamenrider@gmail.com"
           >
             <FiMail className="contact-icon" />
             <span>pengenjadikamenrider@gmail.com</span>
           </a>
         </div>
 
-        {/* <form className="contact-form" onSubmit={handleSubmit}>
+        <form className="contact-form" onSubmit={handleSubmit}>
           <h3 className="form-title">Kirim Pesan</h3>
           <div className="form-group">
             <label htmlFor="name">Nama</label>
@@ -108,6 +121,7 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               required
               placeholder="Nama kamu"
+              aria-describedby="name-error"
             />
           </div>
           <div className="form-group">
@@ -120,6 +134,7 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               required
               placeholder="Email kamu"
+              aria-describedby="email-error"
             />
           </div>
           <div className="form-group">
@@ -131,13 +146,28 @@ const Contact: React.FC = () => {
               onChange={handleChange}
               required
               placeholder="Apa yang ingin kamu sampaikan?"
+              aria-describedby="message-error"
             />
           </div>
-          <button type="submit" className="submit-button" disabled={isSubmitting}>
+          <button
+            type="submit"
+            className="submit-button"
+            disabled={isSubmitting}
+          >
             {isSubmitting ? "Mengirim..." : "Kirim"}
           </button>
-          {submitMessage && <p className="submit-message">{submitMessage}</p>}
-        </form> */}
+          {submitMessage && (
+            <p
+              className={`submit-message ${
+                submitMessage.includes("berhasil")
+                  ? "success-message"
+                  : "error-message"
+              }`}
+            >
+              {submitMessage}
+            </p>
+          )}
+        </form>
       </div>
     </section>
   );
