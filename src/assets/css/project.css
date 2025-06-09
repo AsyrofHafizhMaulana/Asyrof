@@ -204,7 +204,7 @@
 }
 
 .close-button:hover {
-  color: #facc15;
+  color: #a3c7f6;
 }
 
 .modal-image {
@@ -216,14 +216,14 @@
 }
 
 .modal-title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   color: #fff;
   margin-bottom: 1rem;
 }
 
 .modal-details {
-  font-size: 1rem;
+  font-size: 1.5rem;
   color: #d1d5db;
   line-height: 1.6;
   margin-bottom: 1.5rem;
@@ -235,18 +235,18 @@
 }
 
 .project-info p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #d1d5db;
   margin: 0.5rem 0;
 }
 
 .project-info strong {
-  color: #facc15;
+  color: #347fe1;
 }
 
 .pdf-button {
   display: inline-block;
-  background: #facc15;
+  background: #296ee5;
   color: #000;
   padding: 0.6rem 1.2rem;
   border-radius: 0.5rem;
@@ -256,7 +256,7 @@
 }
 
 .pdf-button:hover {
-  background: #eab308;
+  background: #bc3c9c;
   transform: translateY(-2px);
 }
 
