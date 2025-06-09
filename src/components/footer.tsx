@@ -33,7 +33,7 @@ const socialLinks = [
   },
   {
     name: 'LinkedIn',
-    href: 'https://linkedin.com/in/ASYROF HAFIZH MAULANA',
+    href: 'www.linkedin.com/in/asyrof-hafizh-maulana-42142024b',
     icon: FaLinkedin,
   },
 ];
