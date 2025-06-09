@@ -89,7 +89,7 @@ export default function DecryptedText({
 
                 for (let i = nonSpaceChars.length - 1; i > 0; i--) {
                     const j = Math.floor(Math.random() * (i + 1))
-                        ;[nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]]
+                    ;[nonSpaceChars[i], nonSpaceChars[j]] = [nonSpaceChars[j], nonSpaceChars[i]]
                 }
 
                 let charIndex = 0
@@ -192,7 +192,7 @@ export default function DecryptedText({
     const hoverProps =
         animateOn === 'hover'
             ? {
-                onMouseEnter: () => setIsHovering(false),
+                onMouseEnter: () => setIsHovering(true), // Diperbaiki dari false ke true
                 onMouseLeave: () => setIsHovering(false),
             }
             : {}
@@ -204,8 +204,6 @@ export default function DecryptedText({
             {...hoverProps}
             {...props}
         >
-            <span className="sr-only">{displayText}</span>
-
             <span aria-hidden="true" className='inline'>
                 {displayText.split('').map((char, index) => {
                     const isRevealedOrDone =

@@ -49,7 +49,7 @@ const Home: React.FC = () => {
 
           <div className="description-wrapper">
             <DecryptedText
-              text="Saya adalah profesional multidisiplin dengan keahlian di bidang desain grafis, ilustrasi digital, cybersecurity, dan UI/UX design. Berbekal latar belakang teknik komputer, saya menggabungkan kreativitas dan teknologi untuk menghasilkan solusi yang menarik, aman, dan mudah digunakan"
+              text="Saya adalah profesional multidisiplin dengan keahlian di bidang desain grafis, ilustrasi digital, cybersecurity, dan UI/UX design. Berbekal latar belakang teknik komputer, saya menggabungkan kreativitas dan teknologi untuk menghasilkan solusi yang menarik, aman, dan mudah digunakan "
               animateOn="view"
               revealDirection="center"
             />
