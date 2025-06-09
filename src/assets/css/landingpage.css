@@ -80,7 +80,7 @@
 
 .hero-text .description {
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.6;
   margin-bottom: 1.5rem;
   text-align: left;
@@ -202,7 +202,7 @@
     margin-top: 1.5rem;
   }
 
-  .hero-image {
+  /* .hero-image {
     max-width: 300px;
     height: 300px;
     min-width: 280px;
@@ -211,7 +211,7 @@
 
   .hero-image img {
     border-radius: 1rem;
-  }
+  } */
 }
 
 /* Responsif untuk ponsel (lebar layar <= 480px) */
