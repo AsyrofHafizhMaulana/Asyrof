@@ -53,6 +53,7 @@ export default function Navbar() {
         <li><a href="#project" onClick={toggleMenu}>Project</a></li>
         <li><a href="#certificates" onClick={toggleMenu}>Experience</a></li>
         <li><a href="#contact" onClick={toggleMenu}>Contact</a></li>
+        <li><a className='nav-cv-1' href="./AsyrofCV.pdf" onClick={toggleMenu}>LIHAT CV</a></li>
       </ul>
       <div className="nav-cv">
         <a href="./AsyrofCV.pdf" onClick={toggleMenu}>LIHAT CV</a>

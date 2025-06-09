@@ -70,11 +70,11 @@ const Contact: React.FC = () => {
             <h3 className="info-title">Get in Touch</h3>
             <div className="contact-methods">
               <a
-                href="https://www.tiktok.com/@Vectrofff_"
+                href="https://www.tiktok.com/@pengenjadikamenrider_?_t=ZS-8x3iZ7hH2f9&_r=1"
                 className="contact-button tiktok"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="TikTok @vectrofff_"
+                aria-label="TikTok @Vectrofff_"
               >
                 <FaTiktok className="contact-icon" />
                 <span>@vectrofff_</span>

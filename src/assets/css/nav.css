@@ -41,7 +41,9 @@ nav {
   color: #38bdf8;
   text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
 }
-
+.nav-cv-1{
+  display: none;
+}
 .nav-cv a {
   display: block;
   padding: 14px 32px;
@@ -98,6 +100,9 @@ nav {
 
 /* Responsive design */
 @media (max-width: 768px) {
+  .nav-cv-1{
+  display: block;
+}
   nav {
     padding: 0 20px;
     height: 60px;

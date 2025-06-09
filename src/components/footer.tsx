@@ -13,27 +13,27 @@ const services = [
 const socialLinks = [
   {
     name: 'WhatsApp',
-    href: 'https://wa.me/6281234567890',
+    href: 'https://wa.me/6281528558775',
     icon: FaWhatsapp,
   },
   {
     name: 'Instagram',
-    href: 'https://instagram.com/asyrof_ilustrasi',
+    href: 'https://instagram.com/vectrofff_',
     icon: FaInstagram,
   },
   {
     name: 'TikTok',
-    href: 'https://www.tiktok.com/@asyrofmaulana',
+    href: 'https://www.tiktok.com/@pengenjadikamenrider_?_t=ZS-8x3iZ7hH2f9&_r=1',
     icon: FaTiktok,
   },
   {
     name: 'GitHub',
-    href: 'https://github.com/asyrofmaulana',
+    href: 'https://github.com/AsyrofHafizhMaulana',
     icon: FaGithub,
   },
   {
     name: 'LinkedIn',
-    href: 'https://linkedin.com/in/asyrofmaulana',
+    href: 'https://linkedin.com/in/ASYROF HAFIZH MAULANA',
     icon: FaLinkedin,
   },
 ];
