@@ -9,7 +9,7 @@
   position: relative;
   overflow: hidden;
   scroll-margin-top: 80px; /* Offset for smooth scrolling with fixed navbar */
-  background: linear-gradient(135deg, #0f0f11 0%, #1e052d 100%); /* Consistent with projects section */
+  /* background: linear-gradient(135deg, #0f0f11 0%, #1e052d 100%); Consistent with projects section */
 }
 
 .experience-certificates h2 {

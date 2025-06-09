@@ -10,11 +10,10 @@ import Contact from './components/contact'
 import Footer from './components/footer'
 import About from './components/about'
 
-
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <div className="dark-gradient-bg">
-      <Nav />
+    <Nav />
+    <div className="dark-gradient-bg content-wrapper">
       <Main />
       <About />
       <Project />

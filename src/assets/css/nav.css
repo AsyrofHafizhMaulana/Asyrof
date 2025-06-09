@@ -2,38 +2,38 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 80px; /* tinggi navbar lebih besar */
-  background: rgba(10, 10, 35, 0.5); /* transparan */
-  backdrop-filter: blur(10px); /* efek kaca */
+  height: 80px;
+  background: rgba(10, 10, 35, 0.5);
+  backdrop-filter: blur(10px);
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  padding: 0 80px; /* padding kiri-kanan lebih besar, fixed px */
+  padding: 0 80px;
   z-index: 1000;
-  box-shadow: 0 4px 12px rgba(0, 183, 255, 0.25); /* glow biru */
-  font-size: 20px; /* font size fixed, lebih besar */
+  box-shadow: 0 4px 12px rgba(0, 183, 255, 0.25);
+  font-size: 20px;
   border-bottom: 1px solid rgba(0, 212, 255, 0.2);
-  min-width: 1200px; /* minimal lebar navbar agar tidak mengecil */
 }
 
 .navbar-logo {
-  font-size: 27px; /* logo lebih besar */
+  font-size: 27px;
   font-weight: bold;
-  color: #38bdf8; /* biru neon */
-  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6); /* glowing */
+  color: #38bdf8;
+  text-shadow: 0 0 10px rgba(56, 189, 248, 0.6);
 }
 
 .navbar-menu {
+  align-items: center;
   list-style: none;
   display: flex;
-  gap: 40px; /* jarak menu lebih lebar */
+  gap: 40px;
 }
 
 .navbar-menu li a {
   color: white;
   text-decoration: none;
   font-weight: 700;
-  font-size: 15px; /* font size fixed */
+  font-size: 15px;
   transition: all 0.3s ease;
 }
 
@@ -42,9 +42,9 @@ nav {
   text-shadow: 0 0 8px rgba(56, 189, 248, 0.8);
 }
 
-/* Tombol Download CV */
 .nav-cv a {
-  padding: 14px 32px; /* tombol lebih besar */
+  display: block;
+  padding: 14px 32px;
   background: linear-gradient(to right, #3b82f6, #0ea5e9);
   color: white;
   border: none;
@@ -60,4 +60,90 @@ nav {
   background: linear-gradient(to right, #0ea5e9, #0284c7);
   box-shadow: 0 0 20px rgba(56, 189, 248, 0.8);
   transform: scale(1.08);
+}
+
+/* Hamburger menu styling */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 25px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+}
+
+.hamburger span {
+  width: 100%;
+  height: 3px;
+  background: #38bdf8;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -7px);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+    height: 60px;
+    min-width: unset;
+  }
+
+  .navbar-logo {
+    font-size: 22px;
+  }
+
+  .navbar-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background: rgba(10, 10, 35, 0.9);
+    backdrop-filter: blur(10px);
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 0;
+    text-align: center;
+  }
+
+  .navbar-menu.active {
+    display: flex;
+  }
+
+  .navbar-menu li a {
+    font-size: 18px;
+  }
+
+  .navbar-menu .nav-cv {
+  display: none;
+    margin: 0 auto;
+  }
+  .nav-cv{
+    display: none;
+  }
+  .navbar-menu .nav-cv a {
+    padding: 10px 20px;
+    font-size: 12px;
+    display: inline-block;
+  }
+
+  .hamburger {
+    display: flex;
+  }
 }

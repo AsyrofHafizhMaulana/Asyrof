@@ -18,7 +18,20 @@ body, html {
   scroll-behavior: smooth;
   text-align: justify;
 }
+/* Pastikan navbar tetap di atas dengan posisi fixed */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Pastikan navbar di atas elemen lain */
+  background-color: inherit; /* Gunakan warna latar sesuai desain */
+}
 
+/* Tambahkan padding atas pada wrapper konten agar tidak tertutup navbar */
+.content-wrapper {
+  padding-top: 80px; /* Sesuaikan dengan tinggi navbar Anda */
+}
 /* GLOBAL: Gradasi + Grid Glow */
 .dark-gradient-bg {
   position: relative;
