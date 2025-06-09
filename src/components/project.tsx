@@ -35,7 +35,7 @@ const projects: ProjectItem[] = [
     tools: ['OWASP ZAP', 'Nikto', 'Burp Suite', 'Acunetix', 'wapiti', 'Pentest Tools', 'Hosted Scan'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Project Akhir Pentest.pdf',
+    pdfUrl: './Project Akhir Pentest.pdf',
   },
   {
     title: 'Dashboard Monitoring Kolam',
@@ -45,7 +45,7 @@ const projects: ProjectItem[] = [
     tools: ['Flutter', 'MQTT', 'EMX.IO'],
     year: '2024',
     role: 'Web/Mobile Developer',
-    pdfUrl: 'https://example.com/monitoring-kolam.pdf',
+    pdfUrl: '.://example.com/monitoring-kolam.pdf',
   },
   {
     title: 'Forensic Digital',
@@ -55,7 +55,7 @@ const projects: ProjectItem[] = [
     tools: ['Autopsy', 'Foremost', 'FTK Imager'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/DIGITAL FORENSIC.pdf',
+    pdfUrl: './DIGITAL FORENSIC.pdf',
   },
   {
     title: 'Pemantauan Menggunakan SIEM Wazuh',
@@ -65,7 +65,7 @@ const projects: ProjectItem[] = [
     tools: ['Siem Wazuh'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/INCIDENT INVESTIGATION MENGGUNAKAN SIEM WAZUH.pdf',
+    pdfUrl: './INCIDENT INVESTIGATION MENGGUNAKAN SIEM WAZUH.pdf',
   },
   {
     title: 'Cryptography',
@@ -75,7 +75,7 @@ const projects: ProjectItem[] = [
     tools: ['Thunderbird'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/CRYPTOGRAPHY.pdf',
+    pdfUrl: './CRYPTOGRAPHY.pdf',
   },
   {
     title: 'Backup',
@@ -85,7 +85,7 @@ const projects: ProjectItem[] = [
     tools: ['UrBackup'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Backup atau Restore.pdf',
+    pdfUrl: './Backup atau Restore.pdf',
   },
   {
     title: 'KONFIGURASI VLAN & ROUTING INTERVLAN',
@@ -95,7 +95,7 @@ const projects: ProjectItem[] = [
     tools: ['Cisco Packet Tracer'],
     year: '2024',
     role: 'Network Engineering',
-    pdfUrl: 'public/NETWORK SEGMENTATION DENGAN VLAN & ROUTING INTERVLAN.pdf',
+    pdfUrl: './NETWORK SEGMENTATION DENGAN VLAN & ROUTING INTERVLAN.pdf',
   },
   {
     title: 'Hardening WebServer',
@@ -105,7 +105,7 @@ const projects: ProjectItem[] = [
     tools: ['XAMPP'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Honeypot dan Honeynet.pdf',
+    pdfUrl: './Honeypot dan Honeynet.pdf',
   },
 
   {
@@ -116,7 +116,7 @@ const projects: ProjectItem[] = [
     tools: ['Miradore'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Mobile Device Management Menggunakan Miradore.pdf',
+    pdfUrl: './Mobile Device Management Menggunakan Miradore.pdf',
   },
 
   {
@@ -127,7 +127,7 @@ const projects: ProjectItem[] = [
     tools: ['Kismet'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Wireless Security Menggunakan Kismet.pdf',
+    pdfUrl: './Wireless Security Menggunakan Kismet.pdf',
   },
 
   {
@@ -138,7 +138,7 @@ const projects: ProjectItem[] = [
     tools: ['Kismet'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/SECURE & UNSECURE PROTOCOL.pdf',
+    pdfUrl: './SECURE & UNSECURE PROTOCOL.pdf',
   },
 
   {
@@ -149,7 +149,7 @@ const projects: ProjectItem[] = [
     tools: ['Kismet'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Public Key Infrastructure.pdf',
+    pdfUrl: './Public Key Infrastructure.pdf',
   },
 
   {
@@ -160,7 +160,7 @@ const projects: ProjectItem[] = [
     tools: ['Kismet'],
     year: '2024',
     role: 'Cybersecurity',
-    pdfUrl: 'public/Organization Security Menggunakan Nessus.pdf',
+    pdfUrl: './Organization Security Menggunakan Nessus.pdf',
   },
 ];
 
